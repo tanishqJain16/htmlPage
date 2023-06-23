@@ -1,0 +1,92 @@
+.sidebar>.menu{
+    display: flex;
+    margin: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.sidebar>.sidebarMenu{
+    display: none;
+} 
+
+.sidebar.open>.menu{
+    display: none;
+}
+
+.sidebar.open{
+    height: 97vh;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #e1e1e1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    border-radius: 20px;
+    margin: 1rem;
+}
+
+.sidebar.open>.sidebarMenu{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+}
+.sidebar.open>.sidebarMenu>.sidebarTitle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 250px;
+    margin-top: 0.5rem;
+}
+
+.sidebar.open>.sidebarMenu>.sidebarTitle>.sidebarHeading{
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.sidebar.open>.sidebarMenu>.sidebarTitle>.cross{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.sidebar.open>.sidebarMenu>.sidebarList{
+    list-style: none;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.sidebar.open>.sidebarMenu>.sidebarList>.sidebarListItem{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem 4rem;
+    border-radius:10px ;
+    font-weight: 800;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.sidebar.open>.sidebarMenu>.sidebarList>.sidebarListItem:hover{
+    background-color: #9e9e9e;
+    color: white;
+    border-radius: 50%;
+    transition: all 0.5s ease-in-out;
+}
+
+.sidebar.open>.sidebarMenu>.sidebarList>.sidebarListItem.active{
+    background-color: #9e9e9e;
+    color: blue;
+    font-size: 1.5rem;
+    transition: all 0.5s ease-in-out;
+}
+
+
